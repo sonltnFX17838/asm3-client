@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { SendIcon, CustommerIcon } from "../../images/icon/icon";
 import io from "socket.io-client";
 
-const host = "http://localhost:5000";
+const host = process.env.REACT_APP_SERVER;
 
 const ChatWindown = ({ onCloseChat, show }) => {
   const [message, setMessage] = useState("");
